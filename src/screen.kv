@@ -1,0 +1,44 @@
+Screen:
+  BoxLayout:
+    orientation: 'vertical'
+    MDTopAppBar:
+      md_bg_color: 0, 0, 0, 1
+      title: 'Crash WhatsApp'
+    FloatLayout:
+      MDIconButton:
+        pos_hint: {'center_x': .5, 'center_y': .8}
+        icon: 'bug'
+        icon_size: "70sp"
+      MDLabel:
+        pos_hint: {'center_y': .7}
+        halign: 'center'
+        text: 'Crashar WhatsApp'
+      MDTextField:
+        required: 'true'
+        mode: "fill"
+        hint_text: 'Número:'
+        input_filter: 'int'
+        size_hint_x: .7
+        pos_hint: {'center_x': .5, 'center_y': .6}
+        id: numero
+      MDLabel:
+        pos_hint: {'center_y': .4}
+        halign: 'center'
+        text: 'Status: Aguardando comando...'
+        id: status_crash
+      MDFillRoundFlatIconButton:
+        icon: 'check-circle'
+        text: "CRASHAR"
+        md_bg_color: 0, 0, 0, 1
+        size_hint_x: .7
+        pos_hint: {'center_x': .5, 'center_y': .3}
+        on_release: app.crashar()
+        id: btn_crashar
+      MDLabel:
+        pos_hint: {'center_y': .2}
+        halign: 'center'
+        text: 'Developers'
+      MDLabel:
+        pos_hint: {'center_y': 0.15}
+        halign: 'center'
+        text: '@SrCaveiraOFC (App) | @foxyphpps (API)'
